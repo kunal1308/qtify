@@ -2,13 +2,16 @@ import './App.css';
 import { useEffect, useState } from 'react';
 import NavBar from './components/Navbar/NavBar';
 import Hero from "./components/Hero/Hero"
+ //eslint-disable-next-line
 import Card from './components/Card/card';
-import { fetchTopAlbums } from './api/api';
+import Section from './components/Section/Section';
+import { fetchTopAlbums, fetchNewAlbums } from './api/api';
 
 function App() {
   const [topAlbums, setTopAlbums] = useState([]);
+  const [newAlbums, setNewAlbums] = useState([]);
 
-  const generateData = async () => {
+  const generateDataTopAlbums = async () => {
     try {
       const data = await fetchTopAlbums();
       setTopAlbums(data);
@@ -17,18 +20,28 @@ function App() {
     }
   }
 
+  const generateDataNewAlbums = async () => {
+    try {
+      const data = await fetchNewAlbums();
+      setNewAlbums(data);
+    } catch (error) {
+      console.log(error)
+    }
+  }
+
   useEffect(() => {
-    generateData();
+    generateDataTopAlbums();
+    generateDataNewAlbums();
   }, [])
+
   return (
     <div className="App">
     <NavBar />
     <Hero />
-    {topAlbums.map((item) => {
-      return (
-        <Card key={item.id} data={item} type="album" />
-      )
-    })}
+    <div>
+    <Section data = {topAlbums} title = "Top Albums" />
+  
+    </div>
     </div>
   );
 }
