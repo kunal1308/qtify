@@ -33,14 +33,14 @@ function App() {
     generateDataTopAlbums();
     generateDataNewAlbums();
   }, [])
-
+  
   return (
     <div className="App">
     <NavBar />
     <Hero />
     <div>
     <Section data = {topAlbums} title = "Top Albums" />
-  
+    <Section data = {newAlbums} title ="New Albums" />
     </div>
     </div>
   );
