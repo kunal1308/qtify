@@ -1,13 +1,8 @@
-.wrapper {
-    position: relative;
-}
-
-.rightNavigation {
+.leftNavigation {
     cursor: pointer;
     position: absolute;
-    right: 10px;
+    left: 10px;
     top: 40%;
     transform: translateY(-50%);
     z-index: 10;
 }
-

@@ -1,0 +1,25 @@
+.accordionWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-white);
+  }
+  .accordionBody {
+    margin: 20px;
+    width: 80%;
+    height: 78px;
+    left: 152px;
+    top:1494px;
+    border-radius: 10px;
+    border: 2px solid #fff;
+    background: var(--color-black);
+  }
+  
+  .header {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    color: var(--color-white);
+    /* border-radius: 0px 0px 10px 10px; */
+  }

@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { Swiper, SwiperSlide, useSwiper } from "swiper/react";
 import styles from "./Carousel.module.css";
 import CarouselLeftNavigation from "./CarouselLeftNavigation";
-import CarouselRightNavigation from "./CarouselRightNvigation";
+import CarouselRightNavigation from "./CarouselRightNavigation";
 import "swiper/css"
 
 const Carousel = ({ data, componentRender }) => {

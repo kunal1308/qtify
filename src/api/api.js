@@ -7,9 +7,10 @@ export const fetchData = async (endpoint) => {
         const res = await axios.get(`${BACKEND_ENDPOINT}${endpoint}`);
         return res.data;
     } catch (error) {
-        console.log(error);
+        console.error(error);
     }
 };
 
 export const fetchTopAlbums = async () => fetchData("/albums/top");
 export const fetchNewAlbums = async () => fetchData("/albums/new");
+export const fetchSongs = async () => fetchData("/songs");

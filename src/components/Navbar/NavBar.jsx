@@ -4,11 +4,11 @@ import Button from "../Button/Button";
 import Logo from "../Logo/Logo";
 import Search from "../Search/Search";
 
-const NavBar = () => {
+const NavBar = ({albumData}) => {
   return (
     <nav className={styles.navbar}>
         <Logo />
-        <Search />
+        <Search placeholder="Search an album of your choice" albumData={albumData}/>
         <Button children="Give Feedback" />
     </nav>
   )
