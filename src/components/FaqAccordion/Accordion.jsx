@@ -44,7 +44,7 @@ const FaqAccordion = () => {
           onChange={handleChange("panel2")}
           sx={{ backgroundColor: "#121212" }}
         >
-          <AccordionSummary aria-controls="panel2d-content" id="panel2d-header">
+          <AccordionSummary aria-controls="panel2d-content" id="panel2d-header" >
             <div className={styles.header}>
               <Typography sx={{ fontWeight: 600 }}>
                 Can I download and listen to songs offline?
@@ -52,7 +52,7 @@ const FaqAccordion = () => {
               <DownArrowIcon />
             </div>
           </AccordionSummary>
-          <AccordionDetails sx={{ backgroundColor: "white" }}>
+          <AccordionDetails sx={{ backgroundColor: "white",borderRadius:"5px" }}>
             <Typography sx={{ fontWeight: 600 }}>
               Sorry, unfortunately we don't provide the service to download any
               songs.

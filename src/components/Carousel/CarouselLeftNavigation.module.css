@@ -1,7 +1,7 @@
 .leftNavigation {
     cursor: pointer;
     position: absolute;
-    left: 10px;
+    left: 0px;
     top: 40%;
     transform: translateY(-50%);
     z-index: 10;
